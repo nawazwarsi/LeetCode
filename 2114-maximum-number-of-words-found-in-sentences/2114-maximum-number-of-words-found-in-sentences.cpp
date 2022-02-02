@@ -6,8 +6,8 @@ public:
             for(int j=0; j<sentences[i].size(); j++){
                 if(sentences[i][j]==' '){
                     count++; 
+                    ans=max(count,ans);
                 }
-                ans=max(count,ans);
             }
             count=0;
         }
