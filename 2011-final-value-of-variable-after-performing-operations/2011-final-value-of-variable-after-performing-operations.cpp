@@ -12,7 +12,7 @@ public:
             else if(operations[i]=="--X"){
                 --X;
             }
-            else if(operations[i]=="X--"){
+            else{
                 X--;
             }
         }
