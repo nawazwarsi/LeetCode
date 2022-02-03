@@ -1,22 +1,14 @@
 class Solution {
 public:
-    int fourSumCount(vector<int>& A, vector<int>& B, vector<int>& C, vector<int>&D) {
-        unordered_map<int, int>hm;
-        
-        for (int i = 0; i < A.size(); i++) {
-            for (int j = 0; j < B.size(); j++) {
-                hm[A[i]+B[j]]++;
-            }
-        }
-        
-        int res = 0;
-        for (int i = 0; i < C.size(); i++) {
-            for (int j = 0; j < C.size(); j++) {
-                if (hm.find(-C[i]-D[j]) != hm.end())
-                    res += hm[-C[i]-D[j]];
-            }
-        }
-        
-        return res;
+    int fourSumCount(vector<int>& nums1, vector<int>& nums2, vector<int>& nums3, vector<int>& nums4) {
+         unordered_map<int, int> mp;
+    int res = 0;
+    for(int &a:nums1)
+        for(int &b:nums2)
+            mp[a+b]++;
+    for(int &c:nums3)
+        for(int &d:nums4)
+            res += mp[-c-d];
+    return res;      
     }
 };
