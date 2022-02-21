@@ -1,13 +1,21 @@
 class Solution {
+private:
+    bool isIncreasing(vector<int>& nums) {
+        for (int i = 0; i < nums.size()-1; ++i) {
+            if (nums[i] > nums[i+1]) return false;
+        }
+        return true;
+    }
+    
+    bool isDecreasing(vector<int>& nums) {
+        for (int i = 0; i < nums.size()-1; ++i) {
+            if (nums[i] < nums[i+1]) return false;
+        }
+        return true;
+    }
+    
 public:
     bool isMonotonic(vector<int>& nums) {
-        vector<int> newnums;
-        newnums=nums;
-        sort(newnums.begin(),newnums.end());
-        if(newnums==nums) return true;
-        sort(newnums.rbegin(),newnums.rend());
-        if(newnums==nums) return true;
-        else
-            return false;
+        return isIncreasing(nums) || isDecreasing(nums);
     }
 };
