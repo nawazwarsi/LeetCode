@@ -10,8 +10,8 @@ double champagneTower(int poured, int query_row, int query_glass) {
             {
                 if (v[i][j] >= 1)
                 {
-                    v[i + 1][j]     += (v[i][j] - 1) / 2.0;
-                    v[i + 1][j + 1] += (v[i][j] - 1) / 2.0;
+                    v[i + 1][j] = v[i+1][j] + (v[i][j] - 1) / 2.0;
+                    v[i + 1][j + 1] =  v[i + 1][j + 1] + (v[i][j] - 1) / 2.0;
                     v[i][j] = 1;
                 }
             }
