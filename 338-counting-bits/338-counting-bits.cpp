@@ -4,17 +4,16 @@ public:
         int count=0;
         while(n){
             count++;
-            n=n&(n-1);
-            
+            n=(n&(n-1));
         }
         return count;
     }
+    
     vector<int> countBits(int n) {
         vector<int> ans;
-        for(int i=0;i<=n;i++){
+        for(int i=0; i<=n; i++){
             ans.push_back(counting(i));
         }
         return ans;
-        
     }
 };
