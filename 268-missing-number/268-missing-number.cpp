@@ -4,10 +4,8 @@ public:
         sort(nums.begin(), nums.end());
         int n=nums.size();
         int sum=n*(n+1)/2;
-        int ans=0;
-        for(int i=0; i<n; i++){
-            ans+=nums[i];
-        }
+        int ans = accumulate(begin(nums), end(nums),0);
+        
         return sum-ans;
     }
 };
