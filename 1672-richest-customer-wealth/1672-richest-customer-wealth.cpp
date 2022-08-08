@@ -5,11 +5,11 @@ public:
         int ans=0,res=0;
         for(int i=0; i<n; i++){
             for(int j=0; j<accounts[i].size(); j++){
-                res+=accounts[i][j];
-                ans=max(ans,res);
+                ans+=accounts[i][j];
+                res=max(res,ans);
             }
-            res=0;
+            ans=0;
         }
-        return ans;
+        return res;
     }
 };
