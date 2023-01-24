@@ -5,7 +5,7 @@ public:
         int count=0;
         for(int i=0; i<=s.length()-k; i++){
             int temp = stoi(s.substr(i,k));
-            if(temp && (num%temp==0)){
+            if(temp!=0 && (num%temp==0)){
                 count++;
             }
         }
