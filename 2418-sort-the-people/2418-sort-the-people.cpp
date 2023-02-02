@@ -8,22 +8,9 @@ public:
         sort(A.rbegin(), A.rend());
         vector<string> ans;
         for(int i=0; i<names.size(); i++){
-            ans.push_back(A[i].second);
+            names[i]=A[i].second;
         }
-        return ans;
+        return names;
     }
  };
 
-// vector<pair<int, string>> A;
-//         int N = names.size();
-//         for(int i = 0; i < N; i++) {
-//             A.push_back({heights[i], names[i]});
-//         }
-
-//         sort(A.rbegin(), A.rend());
-
-//         vector<string> ans;
-//         for(int i = 0; i < N; i++) {
-//             ans.push_back(A[i].second);
-//         }
-//         return ans;
