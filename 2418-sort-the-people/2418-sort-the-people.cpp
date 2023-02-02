@@ -6,7 +6,6 @@ public:
             A.push_back({heights[i], names[i]});
         }
         sort(A.rbegin(), A.rend());
-        vector<string> ans;
         for(int i=0; i<names.size(); i++){
             names[i]=A[i].second;
         }
