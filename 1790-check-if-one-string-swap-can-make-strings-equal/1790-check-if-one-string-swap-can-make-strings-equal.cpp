@@ -1,6 +1,9 @@
 class Solution {
 public:
     bool areAlmostEqual(string s1, string s2) {
+        if(s1==s2){
+            return true;
+        }
         int count=0;
         string t1 = s1;
         sort(t1.begin(), t1.end());
