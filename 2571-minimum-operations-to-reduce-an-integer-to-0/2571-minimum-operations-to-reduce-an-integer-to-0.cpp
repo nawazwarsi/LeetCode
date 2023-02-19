@@ -6,8 +6,10 @@ public:
         int b = pow(2, nearPower + 1);
         if((n - a == 0) || (b - n == 0)){
             return 1;
-        }          
-        int ans = min(minOperations(n - a) + 1, minOperations(b - n) + 1);
+        } 
+        int temp1 = minOperations(n - a) + 1;
+        int temp2 = minOperations(b - n) + 1;
+        int ans = min(temp1, temp2);
         return ans;
     }
 };
