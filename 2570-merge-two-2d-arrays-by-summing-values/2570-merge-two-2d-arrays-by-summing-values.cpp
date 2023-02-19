@@ -5,11 +5,11 @@ public:
         
         map<int, int> mp;
         for(auto i : nums1){
-            mp[i[0]] += i[1];
+            mp[i[0]] = mp[i[0]] + i[1];
         }
         
         for(auto i : nums2){
-            mp[i[0]] += i[1];
+            mp[i[0]] = mp[i[0]] + i[1];
         }
         
         for(auto i : mp){
